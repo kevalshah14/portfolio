@@ -1,0 +1,151 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{resume} % Base font size set to 10pt
+
+\usepackage[left=0.5in,top=0.3in,right=0.5in,bottom=0.3in]{geometry} % Document margins
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\usepackage{fontawesome} 
+\usepackage{textcomp} 
+\usepackage{hyperref}
+\usepackage{multicol} % For two-column lists
+\usepackage{enumitem} % For customizing itemize environments
+\definecolor{myblue}{RGB}{93, 142, 172}
+
+% Set hyperlink colors
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myblue,
+    citecolor=myblue,
+    urlcolor=myblue
+}
+
+\name{Keval Rajesh Shah} % Your name
+% \address{ } % Your phone number and email
+\address{
+    {\faPhone} \href{tel:+16028137978}{\color{myblue}\underline{602-813-7978}} \quad
+    {\faEnvelope} \href{mailto:kshah57@asu.edu}{\color{myblue}\underline{kshah57@asu.edu}} \quad
+    {\faGithub} \href{https://github.com/kevalshah14}{\color{myblue}\underline{github.com/kevalshah14}} \quad
+    {\faLinkedin} \href{https://linkedin.com/in/keval-shah14/}{\color{myblue}\underline{linkedin.com/in/keval-shah14}} \quad
+    % {\faLaptop} \href{https://kevalshah.dev}{\color{myblue}\underline{kevalshah.dev}}
+}
+
+\begin{document}
+
+% Further reduce font size to 9pt with line spacing of 11pt
+\fontsize{8}{10.5}\selectfont
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+\begin{rSubsection}{\href{https://thegooddronecompany.com/}{\color{myblue}\underline{The Good Drone Company}} | \textbf{Machine Learning \& Embedded Systems Intern}}{June 2025 -- August 2025}{}{}
+    \item Built \textbf{servo degradation ML model} using current/voltage time-series data; designed \textbf{Arduino Nano test rig} with PWM generation, current sensing, and \textbf{circular buffer pipeline} for failure event capture and supervised training.
+    \item Developed \textbf{Python MAVLink parser} for flight log analysis, implementing \textbf{FFT spectral analysis} on IMU vibration data and GPS telemetry processing for geospatial flight path reconstruction.  
+    \item Implemented bare-metal \textbf{C firmware} for distributed \textbf{PIC32 microcontroller network}, featuring custom \textbf{I\textsuperscript{2}C protocols}, interrupt handling, ADC sampling, and real-time task scheduling across multiple control boards.  
+    \item Engineered \textbf{UART telemetry bridge} with packet multiplexing and integrated \textbf{React.js dashboard} for real-time visualization of system states across embedded nodes.    
+    \item Integrated \textbf{RockBLOCK Iridium satellite communication} with flight stack using \textbf{MAVLink/MAVProxy} protocols, enabling remote ground control station connectivity through \textbf{Mission Planner}.  
+\end{rSubsection}
+
+    % \begin{rSubsection}{\href{https://meteor.ame.asu.edu/}{\color{myblue}\underline{Meteor Studios}} | \textbf{Lead XR Developer}}{August 2024 - May 2025}{}{}
+    %     \item Led a team of six in creating a \textbf{VR experience} for 1,000 biomedical students, collaborating with CISA Water Treatment and Dreamscape.
+    %     \item Utilized \textbf{Unity} with \textbf{C\# scripting} and the \textbf{OpenXR toolkit} to build immersive VR applications.
+    %     \item Employed \textbf{SCRUM methodologies} to enhance team collaboration and streamline the development process.
+    % \end{rSubsection}
+    
+\begin{rSubsection}{\href{https://www.behumane.ai/}{\color{myblue}\underline{BeHuman(e)}} | \textbf{Founding AI Engineer}}{Mar 2023 - June 2025}{}{}
+    \item Architected and deployed production \textbf{AI systems} including a \textbf{multi-modal RAG pipeline} for context-aware therapeutic dialogue, \textbf{agentic workflow orchestration} for multi-step reasoning, and \textbf{dynamic model routing infrastructure} to optimize performance across multiple LLMs (GPT-4, Claude, open-source models).
+    \item \textbf{Fine-tuned and aligned large language models} for therapeutic parenting applications using supervised fine-tuning and reinforcement learning from human feedback (RLHF), improving empathy metrics by 35\% and safety alignment scores, while implementing \textbf{NER-based PII detection} pipelines to ensure HIPAA-compliant data processing.
+    \item Built end-to-end \textbf{ML infrastructure} with \textbf{FastAPI} microservices, \textbf{PostgreSQL} vector databases, and real-time \textbf{recommendation engines} using collaborative filtering and neural embeddings, serving 10,000 active users with sub-200ms response times and personalized therapeutic insights.
+\end{rSubsection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{\color{myblue}\underline{EgoTransfer}}{}{}{}
+    \item Built a pipeline for \textbf{egocentric video imitation learning}, tracking human hand motion and converting trajectories into robot joint angles for \textbf{dexterous retargeting}.
+    \item Implemented a retargeting module that maps hand pose estimations to robot kinematics, enabling transfer of fine motor skills from human demonstrations.
+    \item Integrated the retargeted trajectories with \textbf{GR00T-Dreams} to fine-tune a \textbf{ACT} model, producing control policies conditioned on classes of egocentric video demonstrations.
+\end{rSubsection}
+
+
+
+
+    
+\begin{rSubsection}{\color{myblue}\underline{RoboLLVM}}{}{}{}
+    \item Implemented a \textbf{VLA} for \textbf{robotics control}, combining natural language input with video stream processing to generate executable robot actions.
+    \item Designed modular components: \textbf{segmentation} (SA-1B), \textbf{object classification}, \textbf{reasoning}, and \textbf{action planning}, integrated with \textbf{YOLOv8} for low-latency object detection in dynamic environments.
+\end{rSubsection}
+
+\begin{rSubsection}{\color{myblue}\underline{Autonomous Chess-Playing Robotic System}}{}{}{}
+    \item Developed a \textbf{computer vision pipeline} with \textbf{OpenCV} and a \textbf{Gemini-2.0 VLM classifier} for board localization, chess piece detection, and state estimation in real time.
+    \item Implemented \textbf{motion planning algorithms} (trajectory optimization and collision avoidance) for a collaborative robotic arm, enabling accurate pick-and-place execution of chess moves.
+\end{rSubsection}
+
+\begin{rSubsection}{\color{myblue}\underline{Reinforcement Learning from AI Feedback}}{}{}{}
+    \item Developed a scalable \textbf{reinforcement learning (RL) framework} that leverages \textbf{large language models (LLMs)} to autonomously generate and refine \textbf{control policies} across diverse \textbf{robotics} challenges.
+    \item Engineered robust \textbf{memory architectures} and \textbf{policy tables} to discretize \textbf{continuous state spaces}, enabling dynamic \textbf{decision-making} in various \textbf{simulation environments}.
+\end{rSubsection}
+
+    % \begin{rSubsection}{\color{myblue}\underline{EquiBraille}}{}{}{}
+    %     \item Engineered an \textbf{AI-powered refreshable Braille display} using \textbf{CNNs} to transform handwritten classroom text into real-time \textbf{3D Braille} for blind students.
+    %     \item Developed a comprehensive \textbf{software system} that utilizes \textbf{AI} to create accessible educational content including notes, exam prep materials, and quizzes for visually impaired users; built the \textbf{frontend} with \textbf{React.js} and \textbf{Tailwind CSS}, \textbf{AI integration} with \textbf{LangChain}, and the \textbf{backend} with \textbf{FastAPI}.
+    % \end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Education}
+    \begin{rSubsection}{Arizona State University}{August 2024 – December 2025}{Master of Science in Robotics and Autonomous Systems}{Tempe, AZ}
+    \end{rSubsection}
+    
+    \begin{rSubsection}{Arizona State University}{August 2021 – May 2024}{Bachelor of Science in Computer Science}{Tempe, AZ}
+    \end{rSubsection}
+\end{rSection}
+
+\begin{rBulletSection}{Achievements}
+    \item Received \textbf{Moeur Award} - Arizona State University's highest academic distinction
+    \item Graduated \textbf{Summa Cum Laude} from Arizona State University Computer Science program
+    \item Won \textbf{8 hackathons}.
+    \item Earned \textbf{Dean's List} recognition for \textbf{all} undergraduate semesters (Fall 2021 – Spring 2024)
+\end{rBulletSection}
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Technical Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{1ex}} l }
+% ------------ Core Programming ------------------------
+Core Programming &:
+Python, C/C++, MATLAB, JavaScript/TypeScript \\
+% ------------- AI/ML Frameworks & Libraries -----------------------------
+AI/ML Frameworks &:
+TensorFlow, PyTorch, OpenCV, scikit-learn, LangChain, NumPy, Pandas \\
+% ------------- Robotics & Systems -------------------------
+Robotics \& Systems &:
+ROS, NVIDIA Isaac SDK, Docker, AWS \\
+% ------------- Data Management ---------------------
+Data Management &:
+PostgreSQL, MongoDB, ChromaDB, Prisma \\
+% ------------- Web \& Automation ---------------------
+Web \& Automation &:
+React, Next.js, FastAPI, Flask, Selenium, BeautifulSoup, Playwright, GitHub \\
+\end{tabular}
+\end{rSection}
+
+
+\end{document}

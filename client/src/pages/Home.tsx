@@ -1,0 +1,212 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Briefcase, GraduationCap, Heart, Rocket, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Link } from "wouter";
+
+export default function Home() {
+  const handleSocialClick = (type: string, url?: string) => {
+    if (url) {
+      window.open(url, '_blank');
+    } else if (type === 'email') {
+      window.location.href = 'mailto:kshah57@asu.edu';
+    }
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-32 px-4 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
+        {/* Dotted Background Pattern */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(var(--primary) / 0.15) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="space-y-8 animate-in fade-in-0 duration-700">
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+                  Hi, I'm Keval
+                </h1>
+                <p className="text-xl md:text-2xl text-primary font-semibold">
+                  AI Engineer • Robotics Researcher 
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  I'm passionate about building the future through artificial intelligence and robotics. 
+                  I've led technical teams and I'm currently finishing my master's degree.
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  As a former founding engineer at a VC-backed startup, I experienced the excitement of scaling 
+                  cutting-edge technology from concept to reality. My love for robotics and AI drives 
+                  everything I do.
+                </p>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-4 mb-8">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => handleSocialClick('github')}
+                  data-testid="button-home-github"
+                  className="hover-elevate hover:scale-110 transition-transform"
+                >
+                  <Github className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => handleSocialClick('linkedin')}
+                  data-testid="button-home-linkedin"
+                  className="hover-elevate hover:scale-110 transition-transform"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => handleSocialClick('x', 'https://x.com/keval_shah14')}
+                  data-testid="button-home-x"
+                  className="hover-elevate hover:scale-110 transition-transform"
+                >
+                  <Twitter className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => handleSocialClick('email')}
+                  data-testid="button-home-email"
+                  className="hover-elevate hover:scale-110 transition-transform"
+                >
+                  <Mail className="h-4 w-4" />
+                </Button>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg" data-testid="button-view-work" className="hover:scale-105 transition-transform">
+                  <Link href="/experience">
+                    <Briefcase className="h-5 w-5 mr-2" />
+                    View My Work
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" data-testid="button-view-projects" className="hover:scale-105 transition-transform">
+                  <Link href="/projects">
+                    <Rocket className="h-5 w-5 mr-2" />
+                    See Projects
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Column - Profile Photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-primary/20 to-muted/40 rounded-2xl shadow-2xl flex items-center justify-center hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                  <div className="text-center space-y-4">
+                    <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto flex items-center justify-center animate-pulse">
+                      <Heart className="h-12 w-12 text-primary" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">Photo Coming Soon</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* About Me Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+              About Me
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="p-8 hover-elevate transition-all duration-500 animate-in slide-in-from-left-8 duration-1000 delay-200 hover:scale-105" data-testid="card-philosophy">
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                  <h3 className="text-xl font-semibold">My Approach</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  I believe in learning by building. Whether it's diving deep into research papers or 
+                  prototyping new algorithms, I'm constantly experimenting and pushing boundaries. 
+                  My approach combines academic rigor with practical implementation, always asking 
+                  "how can this make a real difference?"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 hover-elevate transition-all duration-500 animate-in slide-in-from-right-8 duration-1000 delay-400 hover:scale-105" data-testid="card-vision">
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <Rocket className="h-6 w-6 text-primary" />
+                  <h3 className="text-xl font-semibold">Looking Ahead</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  I'm fascinated by the convergence of AI and robotics in creating truly autonomous systems. 
+                  From neural networks that can adapt in real-time to robots that understand context, 
+                  I'm working toward a future where intelligent machines become genuine partners in solving 
+                  humanity's biggest challenges.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="mt-8 p-8 bg-primary/5 border-primary/20 hover-elevate transition-all duration-500 animate-in fade-in-0 slide-in-from-bottom-8 duration-1000 delay-600 hover:scale-105" data-testid="card-curiosity">
+            <CardContent className="text-center space-y-4">
+              <div className="flex justify-center items-center gap-3 mb-4">
+                <Heart className="h-6 w-6 text-primary animate-pulse" />
+                <h3 className="text-xl font-semibold">What Drives Me</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Every breakthrough starts with curiosity. I'm energized by late-night debugging sessions, 
+                the "aha!" moment when a complex problem clicks, and seeing teammates grow into their potential. 
+                Beyond the code and algorithms, I'm driven by the possibility that what we build today 
+                could fundamentally change how humans and machines work together tomorrow.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl text-center animate-in fade-in-0 slide-in-from-bottom-8 duration-1000">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 animate-in fade-in-0 duration-1000 delay-200">
+            Let's Build the Future Together
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-in fade-in-0 duration-1000 delay-400">
+            I'm always excited to connect with fellow innovators, researchers, and builders. 
+            Whether you want to collaborate on a project or just chat about the latest in AI and robotics.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 animate-in fade-in-0 duration-1000 delay-600">
+            <Button asChild size="lg" data-testid="button-view-experience" className="hover:scale-105 transition-transform">
+              <Link href="/experience">
+                View My Experience
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" data-testid="button-see-skills" className="hover:scale-105 transition-transform">
+              <Link href="/skills">
+                See My Skills
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
