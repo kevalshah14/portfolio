@@ -4,7 +4,17 @@ import heroBackground from '@assets/generated_images/Tech_portfolio_hero_backgro
 
 export default function Hero() {
   const handleContactClick = (type: string) => {
-    console.log(`${type} contact clicked`);
+    if (type === 'github') {
+      window.open('https://github.com/kevalshah14', '_blank');
+    } else if (type === 'linkedin') {
+      window.open('https://linkedin.com/in/keval-shah14', '_blank');
+    } else if (type === 'email') {
+      window.location.href = 'mailto:kshah57@asu.edu';
+    } else if (type === 'phone') {
+      window.location.href = 'tel:602-813-7978';
+    } else {
+      console.log(`${type} contact clicked`);
+    }
   };
 
   const handleDownloadResume = () => {

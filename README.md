@@ -169,8 +169,8 @@ This project is licensed under the MIT License.
 ## 📞 Contact
 
 - **Email**: kshah57@asu.edu
-- **LinkedIn**: [keval-shah14](https://linkedin.com/in/keval-shah14)
-- **GitHub**: [kevalshah14](https://github.com/kevalshah14)
+- **LinkedIn**: [linkedin.com/in/keval-shah14](https://linkedin.com/in/keval-shah14)
+- **GitHub**: [github.com/kevalshah14](https://github.com/kevalshah14)
 - **Website**: [kevalshah.dev](https://kevalshah.dev)
 
 ---

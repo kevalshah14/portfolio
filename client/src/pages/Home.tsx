@@ -11,6 +11,10 @@ export default function Home() {
       window.open(url, '_blank');
     } else if (type === 'email') {
       window.location.href = 'mailto:kshah57@asu.edu';
+    } else if (type === 'github') {
+      window.open('https://github.com/kevalshah14', '_blank');
+    } else if (type === 'linkedin') {
+      window.open('https://linkedin.com/in/keval-shah14', '_blank');
     }
   };
 
