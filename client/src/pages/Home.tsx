@@ -123,10 +123,12 @@ export default function Home() {
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105">
                   <img
                     src={profileImage}
-                    alt="Keval Shah"
+                    alt="Keval Shah - AI Engineer and Robotics Researcher at Arizona State University"
                     className="w-full h-full object-cover"
                     loading="eager"
                     decoding="async"
+                    width="384"
+                    height="384"
                   />
                 </div>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
