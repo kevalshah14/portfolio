@@ -27,7 +27,7 @@ export default function Navigation() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-layered">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -71,11 +71,12 @@ export default function Navigation() {
               size="sm"
               onClick={toggleTheme}
               data-testid="button-theme-toggle"
+              className="wiggle border-gradient"
             >
               {theme === "dark" ? (
-                <Sun className="h-4 w-4" />
+                <Sun className="h-4 w-4 rotate-slow" />
               ) : (
-                <Moon className="h-4 w-4" />
+                <Moon className="h-4 w-4 pulse-glow" />
               )}
               <span className="sr-only">Toggle theme</span>
             </Button>

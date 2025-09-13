@@ -22,27 +22,20 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-32 px-4 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
-        {/* Dotted Background Pattern */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(var(--primary) / 0.15) 1px, transparent 0)`,
-            backgroundSize: '20px 20px'
-          }}></div>
-        </div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
             <div className="space-y-8 animate-in fade-in-0 duration-700">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                    Hi, I'm
-                  </span>
-                  {' '}
-                  <span className="text-primary drop-shadow-sm">
-                    Keval
-                  </span>
-                </h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+                Hi, I'm
+              </span>
+              {' '}
+              <span className="text-primary drop-shadow-sm">
+                Keval
+              </span>
+            </h1>
                 <p className="text-xl md:text-2xl text-primary font-semibold">
                   AI Engineer • Robotics Researcher 
                 </p>
@@ -120,7 +113,7 @@ export default function Home() {
             {/* Right Column - Profile Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                <div className="w-80 h-80 md:w-96 md:h-96 rounded-2xl shadow-neon overflow-hidden tilt-on-hover border-glowing">
                   <img
                     src={profileImage}
                     alt="Keval Shah - AI Engineer and Robotics Researcher at Arizona State University"
@@ -131,7 +124,11 @@ export default function Home() {
                     height="384"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full pulse-glow"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-primary/30 rounded-full rotate-slow"></div>
+                <div className="absolute top-1/2 -right-8 w-4 h-4 bg-primary/40 rounded-full shadow-magical"></div>
+                <div className="absolute bottom-1/4 -left-6 w-3 h-3 bg-primary/50 rounded-full shadow-neon"></div>
               </div>
             </div>
           </div>
@@ -149,10 +146,10 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="p-8 hover-elevate transition-all duration-500 animate-in slide-in-from-left-8 duration-1000 delay-200 hover:scale-105" data-testid="card-philosophy">
+            <Card className="p-8 interactive-card border-gradient shadow-layered" data-testid="card-philosophy">
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <GraduationCap className="h-6 w-6 text-primary" />
+                  <GraduationCap className="h-6 w-6 text-primary wiggle" />
                   <h3 className="text-xl font-semibold">My Approach</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
@@ -164,10 +161,10 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="p-8 hover-elevate transition-all duration-500 animate-in slide-in-from-right-8 duration-1000 delay-400 hover:scale-105" data-testid="card-vision">
+            <Card className="p-8 interactive-card border-gradient shadow-layered" data-testid="card-vision">
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <Rocket className="h-6 w-6 text-primary" />
+                  <Rocket className="h-6 w-6 text-primary wiggle" />
                   <h3 className="text-xl font-semibold">Looking Ahead</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
@@ -180,10 +177,10 @@ export default function Home() {
             </Card>
           </div>
 
-          <Card className="mt-8 p-8 bg-primary/5 border-primary/20 hover-elevate transition-all duration-500 animate-in fade-in-0 slide-in-from-bottom-8 duration-1000 delay-600 hover:scale-105" data-testid="card-curiosity">
+          <Card className="mt-8 p-8 bg-primary/5 interactive-card shadow-magical border-gradient" data-testid="card-curiosity">
             <CardContent className="text-center space-y-4">
               <div className="flex justify-center items-center gap-3 mb-4">
-                <Heart className="h-6 w-6 text-primary animate-pulse" />
+                <Heart className="h-6 w-6 text-primary pulse-glow" />
                 <h3 className="text-xl font-semibold">What Drives Me</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">

@@ -54,8 +54,8 @@ export default function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <Card 
               key={categoryIndex} 
-              className={`hover-elevate transition-all duration-300 cursor-pointer ${
-                selectedCategory === categoryIndex ? 'ring-2 ring-primary' : ''
+              className={`interactive-card cursor-pointer ${
+                selectedCategory === categoryIndex ? 'border-glowing shadow-neon' : 'border-gradient shadow-layered'
               }`}
               onClick={() => handleCategoryClick(categoryIndex)}
               data-testid={`card-skill-category-${categoryIndex}`}
@@ -83,7 +83,7 @@ export default function Skills() {
 
         {/* Featured Skills Summary */}
         <div className="mt-16 text-center">
-          <Card className="max-w-4xl mx-auto">
+          <Card className="max-w-4xl mx-auto shadow-magical border-gradient interactive-card">
             <CardContent className="py-8">
               <h3 className="text-xl font-semibold mb-6">Core Competencies</h3>
               <div className="flex flex-wrap justify-center gap-3">

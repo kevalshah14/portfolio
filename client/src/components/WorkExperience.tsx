@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
     position: "Machine Learning & Embedded Systems Intern",
     period: "June 2025 – August 2025",
     location: "Remote",
-    url: "https://thegooddronecompany.com/",
+    url: "https://www.thegooddronecompany.com/",
     achievements: [
       "Built servo degradation ML model using current/voltage time-series data; designed Arduino Nano test rig with PWM generation, current sensing, and circular buffer pipeline for failure event capture and supervised training.",
       "Developed Python MAVLink parser for flight log analysis, implementing FFT spectral analysis on IMU vibration data and GPS telemetry processing for geospatial flight path reconstruction.",
@@ -45,7 +45,7 @@ const experiences: ExperienceItem[] = [
 
 export default function WorkExperience() {
   const handleCompanyClick = (url: string) => {
-    console.log('Company link clicked:', url);
+    window.open(url, '_blank');
   };
 
   return (
@@ -62,7 +62,7 @@ export default function WorkExperience() {
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover-elevate transition-all duration-300" data-testid={`card-experience-${index}`}>
+            <Card key={index} className="super-interactive shadow-neon border-gradient" data-testid={`card-experience-${index}`}>
               <CardHeader className="pb-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
@@ -70,11 +70,11 @@ export default function WorkExperience() {
                       {exp.url ? (
                         <button 
                           onClick={() => handleCompanyClick(exp.url!)}
-                          className="text-primary hover:underline flex items-center gap-2"
+                          className="text-primary hover:underline flex items-center gap-2 wiggle shadow-neon rounded-lg px-3 py-2 border-gradient"
                           data-testid={`button-company-${index}`}
                         >
                           {exp.company}
-                          <ExternalLink className="h-4 w-4" />
+                          <ExternalLink className="h-4 w-4 rotate-slow" />
                         </button>
                       ) : (
                         exp.company

@@ -64,7 +64,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover-elevate transition-all duration-300 h-full" data-testid={`card-project-${index}`}>
+            <Card key={index} className="super-interactive shadow-magical border-glowing h-full particle-bg" data-testid={`card-project-${index}`}>
               <CardHeader>
                 <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
                 <CardDescription className="text-sm leading-relaxed">

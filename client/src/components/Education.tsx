@@ -79,7 +79,7 @@ export default function Education() {
             {education.map((edu, index) => (
               <Card 
                 key={index} 
-                className="hover-elevate transition-all duration-300 cursor-pointer"
+                className="interactive-card border-dashed-animated cursor-pointer shadow-layered"
                 onClick={() => handleEducationClick(edu.degree)}
                 data-testid={`card-education-${index}`}
               >
@@ -116,14 +116,14 @@ export default function Education() {
             {achievements.map((achievement, index) => (
               <Card 
                 key={index} 
-                className="hover-elevate transition-all duration-300 cursor-pointer"
+                className="interactive-card border-glowing cursor-pointer shadow-neon tilt-on-hover"
                 onClick={() => handleAchievementClick(achievement.title)}
                 data-testid={`card-achievement-${index}`}
               >
                 <CardContent className="py-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                      <achievement.icon className="h-6 w-6" />
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary pulse-glow">
+                      <achievement.icon className="h-6 w-6 wiggle" />
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg mb-2">{achievement.title}</h4>
