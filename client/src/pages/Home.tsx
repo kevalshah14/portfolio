@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Briefcase, GraduationCap, Heart, Rocket, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Link } from "wouter";
+import profileImage from '@assets/Keval.png';
 
 export default function Home() {
   const handleSocialClick = (type: string, url?: string) => {
@@ -29,8 +30,14 @@ export default function Home() {
             {/* Left Column - Text Content */}
             <div className="space-y-8 animate-in fade-in-0 duration-700">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-                  Hi, I'm Keval
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+                    Hi, I'm
+                  </span>
+                  {' '}
+                  <span className="text-primary drop-shadow-sm">
+                    Keval
+                  </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-primary font-semibold">
                   AI Engineer • Robotics Researcher 
@@ -109,13 +116,14 @@ export default function Home() {
             {/* Right Column - Profile Photo */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-primary/20 to-muted/40 rounded-2xl shadow-2xl flex items-center justify-center hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                  <div className="text-center space-y-4">
-                    <div className="w-24 h-24 bg-primary/30 rounded-full mx-auto flex items-center justify-center animate-pulse">
-                      <Heart className="h-12 w-12 text-primary" />
-                    </div>
-                    <p className="text-sm text-muted-foreground">Photo Coming Soon</p>
-                  </div>
+                <div className="w-80 h-80 md:w-96 md:h-96 rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                  <img
+                    src={profileImage}
+                    alt="Keval Shah"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                    decoding="async"
+                  />
                 </div>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
               </div>
@@ -173,10 +181,19 @@ export default function Home() {
                 <h3 className="text-xl font-semibold">What Drives Me</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Every breakthrough starts with curiosity. I'm energized by late-night debugging sessions, 
-                the "aha!" moment when a complex problem clicks, and seeing teammates grow into their potential. 
-                Beyond the code and algorithms, I'm driven by the possibility that what we build today 
-                could fundamentally change how humans and machines work together tomorrow.
+                I’ve been building robots since I was 9, taking things apart, wiring them back
+                together, and learning how intelligence can live in the real world. With today’s
+                breakthroughs in AI, we’re at a rare inflection point for robotics: models are
+                getting smarter, sensors cheaper, and the gap between simulation and reality is
+                shrinking fast. What we build now will become the foundation for the next decade
+                of physical AI, systems that can see, reason, and act reliably.
+                
+                I’m obsessed with that frontier: turning research into robust, embodied products,
+                shipping iteratively, and learning from every failure in the field. My goal is to
+                help create the primitives (tools, platforms, and techniques) that others can build
+                on, and to do it responsibly with safety, transparency, and real-world impact at
+                the core. I want to ride this wave and contribute something truly foundational to
+                the future of robotics.
               </p>
             </CardContent>
           </Card>

@@ -51,11 +51,11 @@ const projects: Project[] = [
 export default function Projects() {
 
   return (
-    <section className="py-24 px-4 bg-muted/30" data-testid="section-projects">
+    <section className="py-24 px-4 bg-muted/30 bg-dots" data-testid="section-projects">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Featured Projects
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Innovative research and development in AI, robotics, and computer vision

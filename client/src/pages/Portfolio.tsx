@@ -12,7 +12,7 @@ export default function Portfolio() {
   
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navigation isDark={theme === "dark"} toggleTheme={toggleTheme} />
+      <Navigation />
       
       <main>
         <section id="hero">

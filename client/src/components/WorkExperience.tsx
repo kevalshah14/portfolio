@@ -49,11 +49,11 @@ export default function WorkExperience() {
   };
 
   return (
-    <section className="py-24 px-4" data-testid="section-work-experience">
+    <section className="py-24 px-4 bg-dots" data-testid="section-work-experience">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Work Experience
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="text-primary">Work</span> Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Building cutting-edge AI systems and embedded solutions across diverse domains

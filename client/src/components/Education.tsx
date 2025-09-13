@@ -61,11 +61,11 @@ export default function Education() {
   };
 
   return (
-    <section className="py-24 px-4 bg-muted/30" data-testid="section-education">
+    <section className="py-24 px-4 bg-muted/30 bg-dots" data-testid="section-education">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Education & Achievements
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="text-primary">Education</span> & Achievements
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Academic excellence and recognition in computer science and robotics

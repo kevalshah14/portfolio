@@ -39,11 +39,11 @@ export default function Skills() {
   };
 
   return (
-    <section className="py-24 px-4" data-testid="section-skills">
+    <section className="py-24 px-4 bg-dots" data-testid="section-skills">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Technical Skills
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Technical <span className="text-primary">Skills</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Comprehensive expertise across the full technology stack

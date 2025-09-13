@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0" +
-  " hover-elevate active-elevate-2",
+  " hover-elevate active-elevate-2 transition-shadow duration-300 shadow-[0_0_0_0_rgba(0,0,0,0)] hover:shadow-[0_0_18px_2px_hsl(var(--ring)/0.35)] focus-visible:shadow-[0_0_18px_2px_hsl(var(--ring)/0.45)]",
   {
     variants: {
       variant: {
