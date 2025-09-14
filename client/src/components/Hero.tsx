@@ -18,7 +18,12 @@ export default function Hero() {
   };
 
   const handleDownloadResume = () => {
-    console.log('Download resume clicked');
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Keval_Shah_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -107,11 +112,13 @@ export default function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              onClick={() => handleContactClick('portfolio')}
+              asChild
               data-testid="button-view-work"
               className="px-8 hover-elevate"
             >
-              View My Work
+              <a href="/resume.pdf" download>
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>

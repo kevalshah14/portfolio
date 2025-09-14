@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Briefcase, GraduationCap, Heart, Rocket, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Download, GraduationCap, Heart, Rocket, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Link } from "wouter";
 import profileImage from '@assets/Keval.png';
 
@@ -94,12 +94,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" data-testid="button-view-work" className="hover:scale-105 transition-transform">
-                  <Link href="/experience">
-                    <Briefcase className="h-5 w-5 mr-2" />
-                    View My Work
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
+                <Button asChild size="lg" data-testid="button-download-resume" className="hover:scale-105 transition-transform">
+                  <a href="/resume.pdf" download>
+                    <Download className="h-5 w-5 mr-2" />
+                    Download Resume
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg" data-testid="button-view-projects" className="hover:scale-105 transition-transform">
                   <Link href="/projects">
