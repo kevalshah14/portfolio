@@ -7,6 +7,14 @@ import profileImage from '@assets/Keval.png';
 
 export default function Home() {
   const handleSocialClick = (type: string, url?: string) => {
+    // Track social clicks
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'social_click', {
+        social_platform: type,
+        event_category: 'engagement'
+      });
+    }
+    
     if (url) {
       window.open(url, '_blank');
     } else if (type === 'email') {
@@ -15,6 +23,18 @@ export default function Home() {
       window.open('https://github.com/kevalshah14', '_blank');
     } else if (type === 'linkedin') {
       window.open('https://linkedin.com/in/keval-shah14', '_blank');
+    }
+  };
+
+  const handleDownloadResume = () => {
+    // Track resume download
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'file_download', {
+        file_name: 'resume.pdf',
+        file_type: 'PDF',
+        event_category: 'engagement',
+        event_label: 'Home Page Resume Download'
+      });
     }
   };
 
@@ -95,7 +115,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4">
                 <Button asChild size="lg" data-testid="button-download-resume" className="hover:scale-105 transition-transform">
-                  <a href="/resume.pdf" download>
+                  <a href="/resume.pdf" download onClick={handleDownloadResume}>
                     <Download className="h-5 w-5 mr-2" />
                     Download Resume
                   </a>

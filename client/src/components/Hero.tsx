@@ -4,6 +4,14 @@ import heroBackground from '@assets/generated_images/Tech_portfolio_hero_backgro
 
 export default function Hero() {
   const handleContactClick = (type: string) => {
+    // Track contact clicks
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'contact_click', {
+        contact_method: type,
+        event_category: 'engagement'
+      });
+    }
+    
     if (type === 'github') {
       window.open('https://github.com/kevalshah14', '_blank');
     } else if (type === 'linkedin') {
@@ -18,6 +26,16 @@ export default function Hero() {
   };
 
   const handleDownloadResume = () => {
+    // Track resume download
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'file_download', {
+        file_name: 'resume.pdf',
+        file_type: 'PDF',
+        event_category: 'engagement',
+        event_label: 'Hero Resume Download'
+      });
+    }
+    
     const link = document.createElement('a');
     link.href = '/resume.pdf';
     link.download = 'Keval_Shah_Resume.pdf';
