@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Download, GraduationCap, Heart, Rocket, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import profileImage from '@assets/Keval.png';
 
 export default function Home() {
@@ -40,6 +41,21 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Keval Shah - AI Engineer & Robotics Researcher | Portfolio</title>
+        <meta name="description" content="AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems. Former founding engineer with expertise in Python, PyTorch, ROS, and embedded systems." />
+        <link rel="canonical" href="https://kevalshah.dev/" />
+        <meta property="og:url" content="https://kevalshah.dev/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Keval Shah - AI Engineer & Robotics Researcher" />
+        <meta property="og:description" content="AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems." />
+        <meta property="og:image" content="https://kevalshah.dev/attached_assets/Keval.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://kevalshah.dev/" />
+        <meta property="twitter:title" content="Keval Shah - AI Engineer & Robotics Researcher" />
+        <meta property="twitter:description" content="AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems." />
+        <meta property="twitter:image" content="https://kevalshah.dev/attached_assets/Keval.png" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-32 px-4 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">

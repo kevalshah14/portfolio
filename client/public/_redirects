@@ -1,1 +1,9 @@
+# Redirect www to non-www
+https://www.kevalshah.dev/* https://kevalshah.dev/:splat 301!
+
+# Redirect http to https
+http://kevalshah.dev/* https://kevalshah.dev/:splat 301!
+http://www.kevalshah.dev/* https://kevalshah.dev/:splat 301!
+
+# SPA fallback - must be last
 /* /index.html 200
