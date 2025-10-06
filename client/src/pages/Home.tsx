@@ -43,7 +43,9 @@ export default function Home() {
     <div className="min-h-screen">
       <Helmet>
         <title>Keval Shah - AI Engineer & Robotics Researcher | Portfolio</title>
-        <meta name="description" content="AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems. Former founding engineer with expertise in Python, PyTorch, ROS, and embedded systems." />
+        <meta name="description" content="Keval Shah: AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems. Former founding engineer with expertise in Python, PyTorch, ROS, and embedded systems." />
+        <meta name="keywords" content="Keval Shah, AI Engineer, Robotics Researcher, Machine Learning, Computer Vision, Autonomous Systems, Python, PyTorch, ROS, Arizona State University" />
+        <meta name="author" content="Keval Shah" />
         <link rel="canonical" href="https://kevalshah.dev/" />
         <meta property="og:url" content="https://kevalshah.dev/" />
         <meta property="og:type" content="website" />
@@ -55,6 +57,19 @@ export default function Home() {
         <meta property="twitter:title" content="Keval Shah - AI Engineer & Robotics Researcher" />
         <meta property="twitter:description" content="AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems." />
         <meta property="twitter:image" content="https://kevalshah.dev/attached_assets/Keval.png" />
+        <meta property="twitter:creator" content="@keval_shah14" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kevalshah.dev/"
+            }]
+          })}
+        </script>
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-32 px-4 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
@@ -149,15 +164,19 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-2xl shadow-neon overflow-hidden tilt-on-hover border-glowing">
-                  <img
-                    src={profileImage}
-                    alt="Keval Shah - AI Engineer and Robotics Researcher at Arizona State University"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    decoding="async"
-                    width="384"
-                    height="384"
-                  />
+                  <picture>
+                    <source srcSet="/attached_assets/Keval.webp" type="image/webp" />
+                    <img
+                      src={profileImage}
+                      alt="Keval Shah - AI Engineer and Robotics Researcher at Arizona State University"
+                      className="w-full h-full object-cover"
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
+                      width="800"
+                      height="800"
+                    />
+                  </picture>
                 </div>
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none"></div>
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full pulse-glow"></div>

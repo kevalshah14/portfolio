@@ -7,6 +7,8 @@ export default function Experience() {
       <Helmet>
         <title>Work Experience - Keval Shah | AI Engineer & Robotics</title>
         <meta name="description" content="Explore Keval Shah's professional experience as an AI Engineer and Robotics Researcher. Former founding engineer at VC-backed startup, with expertise in autonomous systems, computer vision, and embedded systems." />
+        <meta name="keywords" content="Keval Shah Experience, Keval Shah Work History, AI Engineer Experience, Robotics Researcher, Founding Engineer" />
+        <meta name="author" content="Keval Shah" />
         <link rel="canonical" href="https://kevalshah.dev/experience" />
         <meta property="og:url" content="https://kevalshah.dev/experience" />
         <meta property="og:type" content="website" />
@@ -17,6 +19,24 @@ export default function Experience() {
         <meta property="twitter:url" content="https://kevalshah.dev/experience" />
         <meta property="twitter:title" content="Work Experience - Keval Shah" />
         <meta property="twitter:image" content="https://kevalshah.dev/attached_assets/Keval.png" />
+        <meta property="twitter:creator" content="@keval_shah14" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kevalshah.dev/"
+            }, {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Experience",
+              "item": "https://kevalshah.dev/experience"
+            }]
+          })}
+        </script>
       </Helmet>
       <WorkExperience />
     </div>

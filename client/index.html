@@ -44,18 +44,28 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/attached_assets/Keval.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/attached_assets/Keval.png" type="image/png" />
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     [{
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Keval Shah",
+      "alternateName": ["Keval", "Keval Shah AI Engineer", "Keval Shah Robotics"],
       "jobTitle": "AI Engineer & Robotics Researcher",
-      "description": "AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems.",
+      "description": "Keval Shah is an AI Engineer and Robotics Researcher specializing in machine learning, computer vision, and autonomous systems. Former founding engineer at VC-backed startup.",
       "url": "https://kevalshah.dev",
       "image": "https://kevalshah.dev/attached_assets/Keval.png",
       "email": "kshah57@asu.edu",
       "telephone": "602-813-7978",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Arizona",
+        "addressCountry": "US"
+      },
       "sameAs": [
         "https://github.com/kevalshah14",
         "https://linkedin.com/in/keval-shah14",
@@ -63,7 +73,8 @@
       ],
       "alumniOf": {
         "@type": "EducationalOrganization",
-        "name": "Arizona State University"
+        "name": "Arizona State University",
+        "url": "https://www.asu.edu"
       },
       "knowsAbout": [
         "Machine Learning",
@@ -74,8 +85,19 @@
         "PyTorch",
         "ROS",
         "Embedded Systems",
-        "Autonomous Systems"
+        "Autonomous Systems",
+        "Deep Learning",
+        "Neural Networks"
       ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "AI Engineer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "skills": "Machine Learning, Robotics, Computer Vision, Python, PyTorch"
+      },
       "worksFor": {
         "@type": "Organization",
         "name": "The Good Drone Company"
@@ -85,8 +107,9 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Keval Shah Portfolio",
+      "alternateName": "Keval Shah - AI Engineer Portfolio",
       "url": "https://kevalshah.dev",
-      "description": "Portfolio website of AI Engineer and Robotics Researcher Keval Shah",
+      "description": "Official portfolio website of Keval Shah, AI Engineer and Robotics Researcher. Explore projects, experience, and skills in machine learning and autonomous systems.",
       "author": {
         "@type": "Person",
         "name": "Keval Shah"
@@ -95,7 +118,18 @@
         "@type": "SearchAction",
         "target": "https://kevalshah.dev/?q={search_term_string}",
         "query-input": "required name=search_term_string"
-      }
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Keval Shah"
+      },
+      "url": "https://kevalshah.dev",
+      "name": "Keval Shah - Professional Profile"
     }]
     </script>
     

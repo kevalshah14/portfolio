@@ -7,6 +7,8 @@ export default function ProjectsPage() {
       <Helmet>
         <title>AI & Robotics Projects - Keval Shah | Portfolio</title>
         <meta name="description" content="Discover Keval Shah's AI and robotics projects including autonomous systems, computer vision, machine learning models, and embedded systems. Hands-on experience with PyTorch, ROS, and real-world robotics applications." />
+        <meta name="keywords" content="Keval Shah Projects, AI Projects, Robotics Projects, Machine Learning Portfolio, Computer Vision Projects, Autonomous Systems" />
+        <meta name="author" content="Keval Shah" />
         <link rel="canonical" href="https://kevalshah.dev/projects" />
         <meta property="og:url" content="https://kevalshah.dev/projects" />
         <meta property="og:type" content="website" />
@@ -17,6 +19,24 @@ export default function ProjectsPage() {
         <meta property="twitter:url" content="https://kevalshah.dev/projects" />
         <meta property="twitter:title" content="AI & Robotics Projects - Keval Shah" />
         <meta property="twitter:image" content="https://kevalshah.dev/attached_assets/Keval.png" />
+        <meta property="twitter:creator" content="@keval_shah14" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kevalshah.dev/"
+            }, {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://kevalshah.dev/projects"
+            }]
+          })}
+        </script>
       </Helmet>
       <Projects />
     </div>

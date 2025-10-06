@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
+Crawl-delay: 0
 
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
 Sitemap: https://kevalshah.dev/sitemap.xml
+
+# Host preference
+Host: https://kevalshah.dev
